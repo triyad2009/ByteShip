@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Browse branded storefront and add product",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": ["ByteShip storefront", "product catalog", "search", "category filtering", "add to cart"],
+    "description": "Verifies the redesigned e-commerce storefront supports product discovery and cart entry.",
+    "steps": ["Open the ByteShip storefront", "Search for a product", "Select a category", "Add an in-stock product", "Open the cart"],
+    "expected": "The branded storefront shows shop navigation, matching products are shown, and the selected product appears in the cart."
+  },
+  {
+    "name": "Open complete menu on mobile",
+    "viewport": "mobile",
+    "covers": ["mobile navigation", "complete menu", "cart navigation", "support navigation"],
+    "description": "Verifies the mobile menu exposes the store's main customer-facing destinations.",
+    "steps": ["Open the mobile menu", "Review the menu links", "Open Support", "Return and open Cart & Checkout"],
+    "expected": "The menu opens as an overlay and exposes Home, Shop All Products, Deals & Offers, Categories, How It Works, FAQ, Support, My Account, Cart & Checkout, and Admin."
+  },
+  {
+    "name": "Authenticated checkout submits manual payment verification",
+    "viewport": "desktop",
+    "covers": ["authentication", "checkout", "manual payment", "order creation"],
+    "description": "Verifies checkout requires sign-in and creates a pending-verification order after a transaction ID is submitted.",
+    "steps": ["Add a product", "Open cart while signed out", "Sign in", "Open checkout", "Select bKash", "Enter a transaction ID", "Submit"],
+    "expected": "The order is created as payment-verification-pending and is not delivered automatically."
+  },
+  {
+    "name": "Customer account and AI support",
+    "viewport": "desktop",
+    "covers": ["customer dashboard", "orders", "wallet", "AI support"],
+    "description": "Verifies the authenticated account loads server-backed customer information and store support.",
+    "steps": ["Sign in", "Open My Account", "Review wallet and orders", "Ask AI Support a product question"],
+    "expected": "Account information is shown and AI returns a store-related answer without financial or credential actions."
+  },
+  {
+    "name": "Admin authorization boundary",
+    "viewport": "desktop",
+    "covers": ["admin authorization", "protected routes", "admin dashboard"],
+    "description": "Verifies admin data remains protected while the configured administrator can access store counts.",
+    "steps": ["Open Admin while signed out", "Sign in with the configured administrator", "Open Admin again", "Review store counts"],
+    "expected": "Unauthenticated access does not expose admin data, while the configured administrator sees protected store counts."
+  }
+]

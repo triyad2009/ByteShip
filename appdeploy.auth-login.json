@@ -1,0 +1,14 @@
+{
+  "methods": ["google"],
+  "headline": "Sign in to Digital Products",
+  "subtitle": "Secure access to your orders, deliveries, wallet and support.",
+  "style": {
+    "mode": "dark",
+    "accentColor": "#f6d58a",
+    "backgroundColor": "#08090b",
+    "panelColor": "#121418",
+    "textColor": "#f7f7f5",
+    "fontFamily": "Inter, system-ui, sans-serif",
+    "borderRadius": 16
+  }
+}
